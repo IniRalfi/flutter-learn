@@ -8,7 +8,7 @@ Repositori perjalanan belajar Flutter.
 labs/       → eksperimen kecil
 notes/      → catatan belajar
 roadmaps/   → progress
-showcase/   → project yang layak dipamerkan
+showcase/   → project flutter
 archive/    → project lama
 ```
 
