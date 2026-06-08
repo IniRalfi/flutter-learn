@@ -1,0 +1,16 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Build
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# Linux
+*.swp
+.DS_Store
