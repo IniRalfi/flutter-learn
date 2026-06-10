@@ -95,8 +95,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 16,
                           mainAxisSpacing: 16,
-                          childAspectRatio:
-                              0.9, // DIUBAH: card lebih tinggi (1.2 → 0.9)
+                          childAspectRatio: 0.9,
                         ),
                     itemCount: _filteredOffices.length,
                     itemBuilder: (context, index) {
@@ -123,16 +122,15 @@ class _HomePageState extends State<HomePage> {
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      clipBehavior: Clip.antiAlias, // Tambahan biar gambar tidak keluar border
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () => _navigateToDetail(office.id),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min, // PENTING: biar tidak overflow
+          mainAxisSize: MainAxisSize.min,
           children: [
-            // Gambar dengan aspek rasio tetap
             AspectRatio(
-              aspectRatio: 16 / 11, // Gambar lebih tinggi (16:11)
+              aspectRatio: 16 / 11,
               child: Image.network(
                 office.image,
                 width: double.infinity,
@@ -162,14 +160,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            // Text section dengan jarak yang cukup
+
             Padding(
-              padding: const EdgeInsets.fromLTRB(
-                12,
-                16,
-                12,
-                16,
-              ), // Jarak atas lebih besar (16)
+              padding: const EdgeInsets.fromLTRB(12, 16, 12, 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -188,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey[600],
-                      height: 1.3, // Spasi antar baris
+                      height: 1.3,
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

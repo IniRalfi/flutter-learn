@@ -5,11 +5,9 @@ class DetailPage extends StatelessWidget {
   final GoogleOffice googleOffice;
   final String? googleOfficeId;
 
-  // Constructor sesuai starter project - TIDAK DIUBAH strukturnya
   DetailPage({super.key, GoogleOffice? googleOffice, this.googleOfficeId})
     : googleOffice = googleOffice ?? _getOfficeById(googleOfficeId);
 
-  // Helper function untuk filter berdasarkan ID (Skilled)
   static GoogleOffice _getOfficeById(String? id) {
     if (id == null) return listOfGoogleOffice.first;
     return listOfGoogleOffice.firstWhere(
@@ -25,7 +23,6 @@ class DetailPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Stack untuk gambar dan tombol back
             Stack(
               children: [
                 Container(
@@ -87,7 +84,6 @@ class DetailPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Nama kantor dengan gaya custom (Advanced)
                   Text(
                     googleOffice.name,
                     style: const TextStyle(
@@ -185,7 +181,7 @@ class DetailPage extends StatelessWidget {
     );
   }
 
-  // Widget untuk menampilkan info card (pakai Color.withValues untuk menghindari deprecated)
+  // Widget untuk menampilkan info card
   Widget _buildInfoCard({
     required IconData icon,
     required Color iconColor,
@@ -205,9 +201,7 @@ class DetailPage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: iconColor.withValues(
-                alpha: 0.1,
-              ), // Perbaikan: pakai withValues
+              color: iconColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(icon, color: iconColor, size: 24),
