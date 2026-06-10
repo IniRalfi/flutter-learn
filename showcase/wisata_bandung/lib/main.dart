@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wisata_bandung/screen/detail_screen.dart';
+import 'package:wisata_bandung/screen/home_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,6 +8,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Wisata Bandung', home: DetailScreen());
+    return MaterialApp(
+      title: 'Wisata Bandung',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: HomeScreen(),
+    );
   }
 }
